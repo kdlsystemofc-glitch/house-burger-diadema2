@@ -1,0 +1,83 @@
+/* Reset, base e grade fluida. Sem wrapper global: cada seção é full-bleed (R6). */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  background: var(--c-coal);
+  color: var(--c-cream);
+  font-family: var(--f-text);
+  font-size: var(--fs-m);
+  line-height: var(--lh-text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+img, picture, video, svg { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+button { font: inherit; color: inherit; cursor: pointer; }
+p { max-width: var(--measure); text-wrap: pretty; }
+h1, h2, h3 {
+  font-family: var(--f-title);
+  font-weight: 600;
+  line-height: var(--lh-title);
+  letter-spacing: var(--track-title);
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+:focus-visible { outline: 2px solid var(--c-cheese); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+.skip-link {
+  position: absolute; left: var(--gutter); top: -10rem; z-index: 100;
+  background: var(--c-cheese); color: var(--c-coal); padding: var(--space-xs) var(--space-s);
+}
+.skip-link:focus { top: var(--space-xs); }
+
+/* Grade por seção: colunas nomeadas; o conteúdo respira em telas largas sem wrapper global */
+.grid {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(var(--gutter), 1fr)
+    [content-start] minmax(0, var(--content))
+    [content-end] minmax(var(--gutter), 1fr) [full-end];
+}
+.grid > * { grid-column: content; }
+.grid > .full { grid-column: full; }
+
+/* Rótulo pequeno em caixa-alta */
+.eyebrow {
+  font-family: var(--f-text);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--c-cheese);
+}
+
+/* Botões */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5em;
+  min-height: var(--tap); min-width: var(--tap);
+  padding: 0.7em 1.4em;
+  border: 1px solid var(--c-cream);
+  border-radius: var(--radius);
+  font-family: var(--f-text); font-size: var(--fs-s); font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+  background: transparent; color: var(--c-cream);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+.btn:hover { background: var(--c-cream); color: var(--c-coal); }
+.btn--primary { background: var(--c-ember); border-color: var(--c-ember); color: var(--c-coal); }
+.btn--primary:hover { background: var(--c-cheese); border-color: var(--c-cheese); color: var(--c-coal); }
+.btn svg { width: 1.1em; height: 1.1em; flex: none; }

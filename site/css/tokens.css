@@ -1,0 +1,44 @@
+/* Tokens: única fonte de cor, tipo e espaço (DESIGN.md §3 e §4) */
+:root {
+  /* cor */
+  --c-coal: #0B0A09;
+  --c-night: #060F16;
+  --c-cream: #F1DCC7;
+  --c-ivory: #FBF5E9;
+  --c-mute: #A89B8C;
+  --c-ember: #DB6F24;
+  --c-cheese: #F2A93B;
+  --c-brick: #7E4B2C;
+  --c-wood: #31160D;
+  --c-line: rgb(241 220 199 / 0.18);
+  --c-overlay: rgb(11 10 9 / 0.72);
+  --c-glow: rgb(242 169 59 / 0.35);
+
+  /* tipo */
+  --f-title: "Cormorant", Georgia, "Times New Roman", serif;
+  --f-text: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-xs: clamp(0.78rem, 0.74rem + 0.2vw, 0.88rem);
+  --fs-s: clamp(0.9rem, 0.86rem + 0.2vw, 1rem);
+  --fs-m: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+  --fs-l: clamp(1.35rem, 1.1rem + 1vw, 1.9rem);
+  --fs-xl: clamp(2rem, 1.4rem + 2.6vw, 3.6rem);
+  --fs-xxl: clamp(2.6rem, 1.6rem + 4.6vw, 6rem);
+  --lh-title: 1.02;
+  --lh-text: 1.6;
+  --track-title: 0.04em;
+  --track-label: 0.18em;
+
+  /* espaço */
+  --gutter: clamp(1rem, 5vw, 6rem);
+  --content: 88rem;
+  --space-2xs: clamp(0.25rem, 0.2rem + 0.2vw, 0.4rem);
+  --space-xs: clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem);
+  --space-s: clamp(0.75rem, 0.6rem + 0.6vw, 1.15rem);
+  --space-m: clamp(1.25rem, 1rem + 1vw, 2rem);
+  --space-l: clamp(2rem, 1.5rem + 2.4vw, 3.75rem);
+  --space-xl: clamp(3.5rem, 2.5rem + 5vw, 7.5rem);
+  --space-2xl: clamp(5rem, 3rem + 9vw, 12rem);
+  --radius: 0.25rem;
+  --tap: 2.75rem; /* 44px alvo de toque */
+  --measure: 60ch;
+}

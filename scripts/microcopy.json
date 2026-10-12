@@ -1,0 +1,9 @@
+{
+  "_doc": "Rótulos de interface permitidos que não são dado factual (R11). O checador de texto aceita só estes, fora o que existe em CLIENTE.MD.",
+  "allow": [
+    "Pular para o conteúdo", "Cardápio", "Ambiente", "Como chegar", "Horário", "Endereço", "Telefone",
+    "Pedir agora", "Tour pela casa", "Assistir ao tour", "Fechar", "Hoje", "Pedidos online",
+    "Destaques", "Avaliações", "Nota no Google", "Abrir no mapa", "Ver no Google",
+    "Ver cardápio completo", "Menu principal", "Contato", "Visite", "©", "Início"
+  ]
+}
