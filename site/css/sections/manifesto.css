@@ -1,0 +1,32 @@
+/* S2 Manifesto: título central sobre a "linha de brasa".
+   R9: a faixa e seus ancestrais não têm transform, filter nem opacity < 1. Nunca animada. */
+.manifesto {
+  position: relative;
+  padding-top: var(--space-xl);
+  background: var(--c-coal);
+  text-align: center;
+}
+.manifesto__text { display: grid; justify-items: center; gap: var(--space-s); position: relative; z-index: 1; }
+.manifesto__title {
+  font-size: var(--fs-xxl);
+  color: var(--c-cream);
+  text-shadow: 0 0 0.5em var(--c-glow);
+}
+.manifesto__place { font-size: var(--fs-s); color: var(--c-mute); }
+
+/* Plate P1 (10 KB) + brilho em gradiente + grão SVG estático.
+   O feTurbulence fica dentro da imagem data-URI, não como filter no elemento. */
+.ember-band {
+  height: clamp(9rem, 26vw, 24rem);
+  margin-top: calc(var(--space-l) * -0.5);
+  background-color: var(--c-coal);
+  background-image:
+    linear-gradient(to bottom, var(--c-coal) 0%, transparent 35%, transparent 75%, var(--c-coal) 100%),
+    linear-gradient(to right, var(--c-coal) 0%, transparent 12%, transparent 88%, var(--c-coal) 100%),
+    radial-gradient(ellipse 60% 70% at 50% 85%, var(--c-ember-haze), transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .6 0 0 0 0 .3 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    url("../../assets/plate-brasa-1600.webp");
+  background-size: 100% 100%, 100% 100%, 100% 100%, 10rem 10rem, cover;
+  background-position: center, center, center, 0 0, 50% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat, no-repeat;
+}
