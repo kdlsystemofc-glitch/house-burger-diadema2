@@ -207,3 +207,13 @@ Descartados por serem genéricos: fumaça, vapor, faísca subindo, brilho "shine
 - WebP: largura 800 e 1600 sem ampliar. Se a foto original for menor, a versão "1600" usa a largura original (registrado em assets.md).
 - Fontes via Google Fonts `<link>` nesta fase. Na Fase 4 passam a ser locais em WOFF2.
 - Microcopy de interface permitido: lista fechada em `scripts/microcopy.json` (o checador de texto usa essa lista).
+
+## Decisões tomadas durante a construção (Fase 1)
+
+- S2 ficou sem a foto F15 (mais fiel ao mockup, que só tem título e brasa). F15 foi para o mosaico da S3.
+- Hero mobile: F07 trocada por F01 (F07 tinha pessoa atrás do título).
+- Títulos sem slogan: S2 = "Hambúrguer" (categoria do Google); S4 = "Ambiente" (microcopy); S5 = endereço real. Slogans continuam PENDÊNCIA.
+- "Necessidade de fazer reserva" ficou fora dos selos até o cliente explicar (texto ambíguo).
+- Hero com min-height 100svh (no mockup a 1ª fatia é baixa porque o mockup inteiro é um pôster vertical).
+- Grade por seção com conteúdo até 88rem (variável --content), sem wrapper global (R6).
+- Estrelas da nota em SVG inline; preenchimento de 4,4 aproximado por gradiente.

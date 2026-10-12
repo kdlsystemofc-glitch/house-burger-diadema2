@@ -33,6 +33,15 @@ const HEIGHTS = { 2560: 1440, 1920: 1080, 1440: 900, 1366: 768, 1280: 720, 1024:
         console.log('salvo', `screenshots/${name}-${w}.png`);
       }
     }
+    // rola a página inteira para o Chromium decodificar e pintar todas as imagens antes da captura
+    await page.evaluate(async () => {
+      for (let y = 0; y < document.documentElement.scrollHeight; y += innerHeight / 2) {
+        scrollTo(0, y); await new Promise(r => setTimeout(r, 120));
+      }
+      scrollTo(0, 0);
+      await Promise.all([...document.images].map(i => i.decode().catch(() => {})));
+    });
+    await page.waitForTimeout(300);
     await page.screenshot({ path: path.join(OUT, `full-${w}.png`), fullPage: true });
     console.log('salvo', `screenshots/full-${w}.png`);
     await page.close();

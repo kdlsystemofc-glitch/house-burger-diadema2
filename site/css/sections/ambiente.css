@@ -3,7 +3,8 @@
   padding-block: var(--space-xl);
   background:
     radial-gradient(ellipse 70% 50% at 80% 60%, var(--c-wood-glow), transparent 70%),
-    linear-gradient(to bottom, var(--c-coal), var(--c-wood) 140%);
+    linear-gradient(to bottom, var(--c-coal), var(--c-wood-glow) 50%, var(--c-coal)),
+    var(--c-coal);
 }
 .ambiente__layout { display: grid; gap: var(--space-l); }
 @media (min-width: 56em) {
