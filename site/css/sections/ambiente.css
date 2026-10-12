@@ -1,0 +1,49 @@
+/* S4 Ambiente: texto + selos + nota Google à esquerda, galeria assimétrica de fotos reais à direita */
+.ambiente {
+  padding-block: var(--space-xl);
+  background:
+    radial-gradient(ellipse 70% 50% at 80% 60%, var(--c-wood-glow), transparent 70%),
+    linear-gradient(to bottom, var(--c-coal), var(--c-wood) 140%);
+}
+.ambiente__layout { display: grid; gap: var(--space-l); }
+@media (min-width: 56em) {
+  .ambiente__layout { grid-template-columns: 5fr 7fr; align-items: center; gap: var(--space-xl); }
+}
+.ambiente__text { display: grid; gap: var(--space-m); justify-items: start; }
+.ambiente__title { font-size: var(--fs-xl); }
+
+.tags { display: flex; flex-wrap: wrap; gap: var(--space-xs); list-style: none; padding: 0; }
+.tags li {
+  padding: 0.45em 0.9em;
+  border: 1px solid var(--c-line); border-radius: 999px;
+  font-size: var(--fs-xs); font-weight: 600; letter-spacing: 0.06em; color: var(--c-cream);
+}
+
+.rating { display: grid; gap: var(--space-xs); padding-top: var(--space-s); border-top: 1px solid var(--c-line); width: 100%; }
+.rating__score { display: flex; align-items: baseline; gap: var(--space-s); }
+.rating__value { font-family: var(--f-title); font-weight: 700; font-size: var(--fs-xl); line-height: 1; color: var(--c-cheese); }
+.rating__stars { display: block; width: clamp(5.5rem, 5rem + 2vw, 7rem); height: auto; }
+.rating__count { font-size: var(--fs-s); color: var(--c-mute); }
+.rating__label { font-size: var(--fs-xs); font-weight: 600; letter-spacing: var(--track-label); text-transform: uppercase; color: var(--c-mute); }
+
+.quotes { display: grid; gap: var(--space-s); }
+.quotes blockquote {
+  padding-left: var(--space-s);
+  border-left: 2px solid var(--c-ember);
+  font-family: var(--f-title); font-size: var(--fs-l); font-weight: 600; line-height: 1.25; color: var(--c-ivory);
+}
+.ambiente__more {
+  display: inline-flex; align-items: center; min-height: var(--tap);
+  font-size: var(--fs-s); font-weight: 600; color: var(--c-cheese); text-underline-offset: 0.25em;
+}
+
+.ambiente__gallery {
+  display: grid; gap: var(--space-xs);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.ambiente__gallery figure { overflow: hidden; background: var(--c-wood); }
+.ambiente__gallery img { width: 100%; height: 100%; object-fit: cover; }
+.ambiente__gallery .g-main { grid-row: span 2; }
+.ambiente__gallery .g-main img { aspect-ratio: 3 / 4.6; }
+.ambiente__gallery .g-wide img { aspect-ratio: 4 / 3; }
+.ambiente__gallery .g-tall img { aspect-ratio: 4 / 3; object-position: 50% 60%; }

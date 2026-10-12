@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/sections/hero.css">
   <link rel="stylesheet" href="css/sections/manifesto.css">
   <link rel="stylesheet" href="css/sections/cardapio.css">
+  <link rel="stylesheet" href="css/sections/ambiente.css">
   <!-- SECTION-CSS -->
 </head>
 <body>
@@ -98,6 +99,45 @@
         <figure><img src="assets/cheddar-carne-800.webp" width="540" height="960" loading="lazy" decoding="async" alt="Cheddar cremoso sendo derramado sobre a carne"></figure>
         <figure><img src="assets/burger-crispy-800.webp" width="202" height="304" loading="lazy" decoding="async" alt="Hambúrguer com cobertura verde crocante"></figure>
         <figure><img src="assets/drink-800.webp" width="202" height="270" loading="lazy" decoding="async" alt="Drink laranja em taça, diante de parede verde"></figure>
+      </div>
+    </section>
+    <section id="ambiente" class="ambiente grid" aria-labelledby="ambiente-title">
+      <div class="ambiente__layout">
+        <div class="ambiente__text">
+          <h2 id="ambiente-title" class="ambiente__title">Ambiente</h2>
+          <!-- PENDÊNCIA: confirmar atributos do Google; "Necessidade de fazer reserva" fica fora até o cliente explicar como funciona a reserva -->
+          <ul class="tags">
+            <li>Pratos para happy hour</li>
+            <li>Espaço privativo para eventos</li>
+          </ul>
+          <!-- PENDÊNCIA: autorização para exibir nota e trechos de avaliações do Google (dados de out/2026) -->
+          <div class="rating">
+            <p class="rating__label">Nota no Google</p>
+            <p class="rating__score">
+              <span class="rating__value">4,4</span>
+              <svg class="rating__stars" viewBox="0 0 120 22" role="img" aria-label="4,4 de 5 estrelas">
+                <defs>
+                  <linearGradient id="star-fill" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="118" y2="0"><stop offset="91%" style="stop-color: var(--c-cheese)"/><stop offset="91%" style="stop-color: var(--c-line)"/></linearGradient>
+                  <path id="star" d="M11 1l2.9 6.6 7.1.6-5.4 4.7 1.6 7L11 16.2 4.8 19.9l1.6-7L1 8.2l7.1-.6z"/>
+                </defs>
+                <g fill="url(#star-fill)">
+                  <use href="#star" x="0"/><use href="#star" x="24"/><use href="#star" x="48"/><use href="#star" x="72"/><use href="#star" x="96"/>
+                </g>
+              </svg>
+              <span class="rating__count">(171)</span>
+            </p>
+            <div class="quotes">
+              <blockquote>"Bom hambúrguer, galera gente boa, preço de acordo com a qualidade."</blockquote>
+              <blockquote>"Pessoal muito atencioso, lanches muito bons e ambiente agradável."</blockquote>
+            </div>
+            <a class="ambiente__more" href="https://www.google.com/maps/search/?api=1&amp;query=House+Burger+Diadema" target="_blank" rel="noopener">Mais avaliações no Google</a>
+          </div>
+        </div>
+        <div class="ambiente__gallery">
+          <figure class="g-main"><img src="assets/patio-mesa-800.webp" srcset="assets/patio-mesa-800.webp 800w, assets/patio-mesa-1600.webp 1200w" sizes="(min-width: 56em) 30vw, 50vw" width="1200" height="1600" loading="lazy" decoding="async" alt="Pátio da casa à noite, com mesa redonda, cadeiras e tronco decorativo iluminado"></figure>
+          <figure class="g-wide"><img src="assets/patio-toco-800.webp" srcset="assets/patio-toco-800.webp 800w, assets/patio-toco-1600.webp 1280w" sizes="(min-width: 56em) 30vw, 50vw" width="1280" height="720" loading="lazy" decoding="async" alt="Área coberta do pátio com plantas, bicicleta decorativa e luminárias quentes"></figure>
+          <figure class="g-tall"><img src="assets/salao-800.webp" width="720" height="1280" loading="lazy" decoding="async" alt="Salão interno com mesas e luminária pendente"></figure>
+        </div>
       </div>
     </section>
     <!-- SECTIONS -->
