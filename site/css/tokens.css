@@ -13,6 +13,8 @@
   --c-line: rgb(241 220 199 / 0.18);
   --c-overlay: rgb(11 10 9 / 0.72);
   --c-glow: rgb(242 169 59 / 0.35);
+  --c-overlay-night: rgb(6 15 22 / 0.74);
+  --c-backdrop: rgb(0 0 0 / 0.85);
 
   /* tipo */
   --f-title: "Cormorant", Georgia, "Times New Roman", serif;

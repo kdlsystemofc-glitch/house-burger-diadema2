@@ -9,11 +9,57 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@600;700&family=Manrope:wght@400;600&display=swap">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections/hero.css">
   <!-- SECTION-CSS -->
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="site-header__logo" href="#inicio">
+      <!-- PENDÊNCIA: logo em alta (atual 150 px, F19) -->
+      <img src="assets/logo-800.webp" width="150" height="150" alt="House Burger Diadema">
+    </a>
+    <nav class="site-nav" aria-label="Menu principal">
+      <ul>
+        <li><a href="#cardapio">Cardápio</a></li>
+        <li><a href="#ambiente">Ambiente</a></li>
+        <li><a href="#visite">Como chegar</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary" href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener">Pedir agora</a>
+  </header>
   <main id="conteudo">
+    <section id="inicio" class="hero grid" aria-labelledby="hero-title">
+      <picture class="hero__bg full">
+        <source media="(min-width: 48em)" srcset="assets/hero-patio-800.webp 800w, assets/hero-patio-1600.webp 1280w" sizes="100vw">
+        <img src="assets/corredor-entrada-800.webp" srcset="assets/corredor-entrada-800.webp 720w" sizes="100vw" width="720" height="1280" alt="" fetchpriority="high">
+      </picture>
+      <div class="hero__content">
+        <h1 id="hero-title" class="hero__title">House Burger <span>Diadema</span></h1>
+        <p class="hero__meta">
+          <span>Hambúrguer</span>
+          <span class="dot" aria-hidden="true"></span>
+          <!-- PENDÊNCIA: horário completo (dias e fechamento); o Google mostra só "Abre às 17:00" -->
+          <span class="hero__status">Abre às 17:00</span>
+        </p>
+        <a class="hero__play" href="assets/tour.mp4" data-video-open>
+          <span class="hero__play-icon" aria-hidden="true"><svg viewBox="0 0 12 14" fill="currentColor"><path d="M0 0l12 7-12 7z"/></svg></span>
+          <span>Tour pela casa</span>
+        </a>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener">Pedir delivery</a>
+          <a class="btn" href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener">Pedir e retirar</a>
+          <!-- PENDÊNCIA: confirmar se o número é WhatsApp -->
+          <a class="btn" href="tel:+5511942163332">Ligar</a>
+        </div>
+      </div>
+      <dialog class="video-dialog" id="video-dialog" aria-label="Tour pela casa">
+        <video controls playsinline preload="none" poster="assets/tour-poster.webp" width="480" height="854">
+          <source src="assets/tour.mp4" type="video/mp4">
+        </video>
+        <form method="dialog"><button class="video-dialog__close">Fechar</button></form>
+      </dialog>
+    </section>
     <!-- SECTIONS -->
   </main>
   <script src="js/main.js" defer></script>
