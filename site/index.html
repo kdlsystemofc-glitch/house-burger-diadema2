@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/sections/manifesto.css">
   <link rel="stylesheet" href="css/sections/cardapio.css">
   <link rel="stylesheet" href="css/sections/ambiente.css">
-  <!-- SECTION-CSS -->
+  <link rel="stylesheet" href="css/sections/visite.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -140,8 +140,52 @@
         </div>
       </div>
     </section>
-    <!-- SECTIONS -->
+    <section id="visite" class="visite grid" aria-labelledby="visite-title">
+      <div class="visite__layout">
+        <figure class="visite__photo">
+          <!-- PENDÊNCIA: autorização de imagem da pessoa na foto da fachada (F05) -->
+          <img src="assets/fachada-800.webp" srcset="assets/fachada-800.webp 800w, assets/fachada-1600.webp 1200w" sizes="(min-width: 56em) 40vw, 100vw" width="1200" height="1600" loading="lazy" decoding="async" alt="Fachada da House Burger Diadema à noite, número 351, com letreiro iluminado da casa">
+        </figure>
+        <div class="visite__info">
+          <p class="eyebrow">Como chegar</p>
+          <!-- PENDÊNCIA: frase de fechamento (a do mockup era inventada) -->
+          <h2 id="visite-title" class="visite__title">R. Moacyr Goulart Cunha Caldas, 351 <span>Centro, Diadema - SP, 09911-450</span></h2>
+          <dl class="facts">
+            <div>
+              <dt>Horário</dt>
+              <!-- PENDÊNCIA: dias da semana e horário de fechamento -->
+              <dd>Abre às 17:00</dd>
+            </div>
+            <div>
+              <dt>Telefone</dt>
+              <dd><a href="tel:+5511942163332">(11) 94216-3332</a></dd>
+            </div>
+            <div>
+              <dt>Pedidos online</dt>
+              <dd><a href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener">houseburgerdiadema.ola.click</a></dd>
+            </div>
+          </dl>
+          <div class="visite__actions">
+            <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=R.+Moacyr+Goulart+Cunha+Caldas,+351+-+Centro,+Diadema+-+SP,+09911-450" target="_blank" rel="noopener">Rotas</a>
+            <a class="btn" href="tel:+5511942163332">Ligar</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="site-footer grid">
+    <div class="site-footer__inner">
+      <p class="site-footer__brand"><img src="assets/logo-800.webp" width="150" height="150" loading="lazy" alt="">House Burger Diadema</p>
+      <nav aria-label="Rodapé">
+        <ul>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#ambiente">Ambiente</a></li>
+          <li><a href="#visite">Como chegar</a></li>
+        </ul>
+      </nav>
+      <p class="site-footer__copy"><span>©</span> <span>House Burger Diadema</span></p>
+    </div>
+  </footer>
   <script src="js/main.js" defer></script>
 </body>
 </html>
