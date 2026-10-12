@@ -17,12 +17,18 @@ const HEIGHTS = { 2560: 1440, 1920: 1080, 1440: 900, 1366: 768, 1280: 720, 1024:
   for (const w of widths) {
     const page = await browser.newPage({ viewport: { width: w, height: HEIGHTS[w] || 900 } });
     await page.goto(URL, { waitUntil: 'networkidle' });
-    await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(async () => {
+      document.querySelectorAll('img[loading=lazy]').forEach(i => { i.loading = 'eager'; });
+      await Promise.all([...document.images].filter(i => !i.complete).map(i => new Promise(r => { i.onload = i.onerror = r; })));
+      await document.fonts.ready;
+    });
+    await page.waitForFunction(() => [...document.images].every(i => i.complete && i.naturalWidth > 0), null, { timeout: 15000 });
     if (sel) {
       const el = await page.$(sel);
       if (!el) { console.error('seção não encontrada:', sel); process.exitCode = 1; }
       else {
         const name = sel.replace(/[^a-z0-9-]/gi, '');
+        await el.scrollIntoViewIfNeeded(); await page.waitForTimeout(500);
         await el.screenshot({ path: path.join(OUT, `${name}-${w}.png`) });
         console.log('salvo', `screenshots/${name}-${w}.png`);
       }

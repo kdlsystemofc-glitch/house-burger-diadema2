@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/sections/hero.css">
   <link rel="stylesheet" href="css/sections/manifesto.css">
+  <link rel="stylesheet" href="css/sections/cardapio.css">
   <!-- SECTION-CSS -->
 </head>
 <body>
@@ -68,6 +69,36 @@
         <p class="manifesto__place">Centro, Diadema - SP</p>
       </div>
       <div class="ember-band full" aria-hidden="true"></div>
+    </section>
+    <section id="cardapio" class="cardapio grid" aria-labelledby="cardapio-title">
+      <figure class="cardapio__hero">
+        <!-- Fallback do A1 (recorte não recebido): foto real F17 com máscara CSS. PENDÊNCIA: direito de uso da foto. -->
+        <img src="assets/burger-australiano-800.webp" width="540" height="960" loading="lazy" decoding="async"
+             alt="Hambúrguer de pão escuro com cheddar derretido escorrendo">
+      </figure>
+      <div class="cardapio__body">
+        <div class="cardapio__head">
+          <p class="eyebrow">Cardápio</p>
+          <h2 id="cardapio-title" class="cardapio__title">Destaques do cardápio</h2>
+          <a class="btn btn--primary" href="https://houseburgerdiadema.ola.click" target="_blank" rel="noopener">Ver o cardápio</a>
+        </div>
+        <!-- PENDÊNCIA: preços de cada item; grafia "Harmburguer Gourmet" a confirmar (copiado do Google) -->
+        <ol class="menu-list">
+          <li>House Burger</li>
+          <li>Gorgonburger</li>
+          <li>Pão Australiano</li>
+          <li>Harmburguer Gourmet</li>
+          <li>Mr Salad Com 2 Carnes</li>
+          <li>Saquerinha de Morango</li>
+        </ol>
+      </div>
+      <!-- Fotos sem legenda de prato: não sabemos qual foto é qual item (PENDÊNCIA). Direito de uso pendente. -->
+      <div class="cardapio__gallery">
+        <figure><img src="assets/burger-empanado-800.webp" srcset="assets/burger-empanado-800.webp 800w, assets/burger-empanado-1600.webp 1065w" sizes="(min-width: 48em) 50vw, 50vw" width="1065" height="1065" loading="lazy" decoding="async" alt="Hambúrguer com carne e empanado em prato branco, sobre mesa de madeira"></figure>
+        <figure><img src="assets/cheddar-carne-800.webp" width="540" height="960" loading="lazy" decoding="async" alt="Cheddar cremoso sendo derramado sobre a carne"></figure>
+        <figure><img src="assets/burger-crispy-800.webp" width="202" height="304" loading="lazy" decoding="async" alt="Hambúrguer com cobertura verde crocante"></figure>
+        <figure><img src="assets/drink-800.webp" width="202" height="270" loading="lazy" decoding="async" alt="Drink laranja em taça, diante de parede verde"></figure>
+      </div>
     </section>
     <!-- SECTIONS -->
   </main>

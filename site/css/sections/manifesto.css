@@ -21,7 +21,7 @@
   margin-top: calc(var(--space-l) * -0.5);
   background-color: var(--c-coal);
   background-image:
-    linear-gradient(to bottom, var(--c-coal) 0%, transparent 35%, transparent 75%, var(--c-coal) 100%),
+    linear-gradient(to bottom, var(--c-coal) 0%, transparent 35%, transparent 70%, var(--c-coal) 94%),
     linear-gradient(to right, var(--c-coal) 0%, transparent 12%, transparent 88%, var(--c-coal) 100%),
     radial-gradient(ellipse 60% 70% at 50% 85%, var(--c-ember-haze), transparent 70%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .6 0 0 0 0 .3 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
