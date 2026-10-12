@@ -217,3 +217,17 @@ Descartados por serem genéricos: fumaça, vapor, faísca subindo, brilho "shine
 - Hero com min-height 100svh (no mockup a 1ª fatia é baixa porque o mockup inteiro é um pôster vertical).
 - Grade por seção com conteúdo até 88rem (variável --content), sem wrapper global (R6).
 - Estrelas da nota em SVG inline; preenchimento de 4,4 aproximado por gradiente.
+
+## Revisão de fidelidade ao mockup (pedido do humano, 2026-10-12)
+
+| Seção | Mockup | Antes | Agora |
+|---|---|---|---|
+| S1 | bar escuro, luzes no alto à esquerda, título médio fino, "00:19 REEL" + play pequeno, sem botões | foto do pátio, título enorme e pesado, 3 botões | **vídeo real em loop** (0–21 s do tour, sem som), escurecido à direita e embaixo, brilho no alto à esquerda, título peso 500 menor, rótulo "Tour pela casa" + play pequeno; botões de pedido saíram do hero (ficou só "Pedir agora" no topo) |
+| S2 | título de 2 linhas SOBRE a brasa, chama à direita, névoa | título acima da faixa | título "Hambúrguer & happy hour" sobre a faixa; chama e névoa em gradiente CSS (sem fumaça animada) |
+| S3 | burger centralizado flutuando sobre a brasa | burger + lista em 2 colunas + mosaico de 4 fotos | burger maior e centralizado; lista centralizada em linha com "·"; mosaico removido (o mockup não tem); botões de pedido vieram para cá |
+| S4 | foto larga do salão, full-bleed, fundida no escuro | texto + nota + 2 avaliações + galeria de 3 fotos | 1 foto real larga full-bleed (F02) fundida em cima e embaixo; selos e nota pequenos sobre a parte escura; trechos de avaliação removidos |
+| S5 | "X // DIADEMA" grande com glow, "Abre às 17:00" em serifa, linhas pequenas | foto da fachada + dados em colunas | "Centro // Diadema" com glow, "Abre às 17:00" em serifa, endereço e contato em linhas pequenas, Rotas/Ligar; foto da fachada removida (também resolve o risco "Club Burger" e a pessoa) |
+
+Assets que ficaram sem uso (remover na Fase 4): hero-patio, burger-empanado, cheddar-carne, burger-crispy, drink, patio-mesa, salao, fachada, corredor-entrada.
+Desvio conhecido: no desktop o vídeo vertical (480 px) é ampliado e cortado; fica suave atrás do overlay. Melhoraria com um vídeo horizontal em 1080p do cliente.
+Movimento: com prefers-reduced-motion o vídeo some e fica o pôster. O botão de pausa entra na Fase 3.

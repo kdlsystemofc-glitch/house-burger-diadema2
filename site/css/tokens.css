@@ -17,6 +17,11 @@
   --c-backdrop: rgb(0 0 0 / 0.85);
   --c-ember-haze: rgb(219 111 36 / 0.28);
   --c-wood-glow: rgb(126 75 44 / 0.22);
+  --c-glow-soft: rgb(242 169 59 / 0.14);
+  --c-overlay-light: rgb(6 15 22 / 0.62);
+  --c-overlay-deep: rgb(6 10 14 / 0.9);
+  --c-flame: rgb(232 120 40 / 0.32);
+  --c-smoke: rgb(168 155 140 / 0.10);
 
   /* tipo */
   --f-title: "Cormorant", Georgia, "Times New Roman", serif;
@@ -27,9 +32,11 @@
   --fs-l: clamp(1.35rem, 1.1rem + 1vw, 1.9rem);
   --fs-xl: clamp(2rem, 1.4rem + 2.6vw, 3.6rem);
   --fs-xxl: clamp(2.6rem, 1.6rem + 4.6vw, 6rem);
+  --fs-hero: clamp(2.1rem, 1.2rem + 3.6vw, 4.8rem);
   --lh-title: 1.02;
   --lh-text: 1.6;
   --track-title: 0.04em;
+  --track-tight: 0.01em;
   --track-label: 0.18em;
 
   /* espaço */

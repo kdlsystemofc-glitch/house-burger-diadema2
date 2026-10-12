@@ -14,16 +14,17 @@ Etapa atual: FASE 2 (aguardando aprovação visual da Fase 1)
   - 1070467 ambiente pronta
   - d60451f visite e rodape pronta
   - 39c586d ajustes finais + screenshots 1440/768/390
+  - Revisão de fidelidade ao mockup + vídeo em loop no hero (pedido do humano).
   - Push: NÃO feito (GH_TOKEN ausente).
 
 ## Seções (CHECK-SEÇÃO mecânico: todas passaram em 1440 e 390)
 | Seção | Check | Problema aberto |
 |---|---|---|
-| S1 Hero (#inicio) | OK | foto desktop F03 tem 1280 px (A2 não recebido); horário completo pendente |
+| S1 Hero (#inicio) | OK | vídeo vertical ampliado no desktop (suave); horário completo pendente |
 | S2 Manifesto (#casa) | OK | título sem slogan (PENDÊNCIA) |
-| S3 Cardápio (#cardapio) | OK | burger sem recorte (fallback do A1 com máscara); preços; grafia "Harmburguer"; direito de uso das fotos |
-| S4 Ambiente (#ambiente) | OK | autorização da nota e das avaliações |
-| S5 Visite + rodapé (#visite) | OK | foto da fachada mostra pessoa e o letreiro "Club Burger"; logo 150 px |
+| S3 Cardápio (#cardapio) | OK | burger sem recorte (fallback do A1); preços; grafia "Harmburguer" |
+| S4 Ambiente (#ambiente) | OK | autorização da nota do Google |
+| S5 Visite + rodapé (#visite) | OK | título sem frase da casa (PENDÊNCIA); logo 150 px |
 
 ## Pendências abertas
 - Aprovação visual da Fase 1 pelo humano.

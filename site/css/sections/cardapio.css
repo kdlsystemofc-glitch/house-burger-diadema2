@@ -1,72 +1,52 @@
-/* S3 Destaque + cardápio. Fallback do A1: foto real F17 inteira com máscara radial (sem recorte). */
+/* S3 Destaque: burger centralizado flutuando entre a brasa (S2) e o ambiente (S4), como em secao-03.
+   Fallback do A1: foto real F17 inteira com máscara radial (sem recorte). */
 .cardapio {
   position: relative;
-  padding-bottom: var(--space-xl);
+  z-index: 1;
+  padding-bottom: var(--space-l);
   background: var(--c-coal);
+  text-align: center;
 }
 .cardapio__hero {
   justify-self: center;
   position: relative;
-  width: clamp(15rem, 32vw, 30rem);
-  margin-top: calc(clamp(9rem, 26vw, 24rem) * -0.55);
-  margin-bottom: var(--space-l);
+  width: clamp(16rem, 40vw, 34rem);
+  margin-top: calc(clamp(22rem, 58vw, 46rem) * -0.42);
 }
 .cardapio__hero img {
-  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%;
-  -webkit-mask-image: radial-gradient(ellipse 50% 52% at 50% 50%, var(--c-coal) 64%, transparent 100%);
-  mask-image: radial-gradient(ellipse 50% 52% at 50% 50%, var(--c-coal) 64%, transparent 100%);
+  width: 100%; aspect-ratio: 5 / 4; object-fit: cover; object-position: 50% 42%;
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, var(--c-coal) 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, var(--c-coal) 62%, transparent 100%);
 }
 /* sombra elíptica sob o burger */
 .cardapio__hero::after {
-  content: ""; position: absolute; left: 15%; right: 15%; bottom: 2%; height: 10%; z-index: -1;
+  content: ""; position: absolute; left: 18%; right: 18%; bottom: 0; height: 14%; z-index: -1;
   background: radial-gradient(ellipse 50% 50% at 50% 50%, var(--c-backdrop), transparent 70%);
 }
 
-.cardapio__body {
-  display: grid; gap: var(--space-l);
+.cardapio__body { display: grid; justify-items: center; gap: var(--space-m); margin-top: var(--space-m); }
+.cardapio__title {
+  font-size: var(--fs-l); font-weight: 500; letter-spacing: var(--track-label);
+  color: var(--c-mute);
 }
-@media (min-width: 56em) {
-  .cardapio__body { grid-template-columns: 5fr 7fr; align-items: start; }
-}
-.cardapio__head { display: grid; gap: var(--space-s); align-content: start; justify-items: start; }
-.cardapio__title { font-size: var(--fs-xl); color: var(--c-cream); }
-
+/* Lista em linha, separada por pontos, no tom tipográfico do mockup */
 .menu-list {
   list-style: none; padding: 0;
-  display: grid; gap: 0 var(--space-l);
-  counter-reset: item;
-}
-@media (min-width: 36em) {
-  .menu-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2xs) 0;
+  max-width: 48rem;
 }
 .menu-list li {
-  counter-increment: item;
-  display: flex; align-items: baseline; gap: var(--space-s);
-  padding-block: var(--space-s);
-  border-bottom: 1px solid var(--c-line);
-  font-family: var(--f-title); font-weight: 600; font-size: var(--fs-l);
-  line-height: 1.15; color: var(--c-cream);
+  font-family: var(--f-title); font-weight: 500; font-size: var(--fs-l);
+  line-height: 1.3; color: var(--c-cream);
 }
-.menu-list li::before {
-  content: counter(item, decimal-leading-zero);
-  font-family: var(--f-text); font-size: var(--fs-xs); font-weight: 600;
-  letter-spacing: 0.1em; color: var(--c-ember);
+.menu-list li:not(:last-child)::after {
+  content: "·"; margin-inline: 0.55em; color: var(--c-ember);
 }
-
-/* Fotos do Google têm ~200 px: ficam nas células menores para não ampliar demais */
-.cardapio__gallery {
-  display: grid; gap: var(--space-xs);
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: var(--space-l);
+.cardapio__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-xs); }
+@media (max-width: 30em) {
+  .cardapio__actions { display: grid; width: 100%; }
 }
-.cardapio__gallery figure:first-child { grid-column: span 3; }
-@media (min-width: 48em) {
-  .cardapio__gallery { grid-template-columns: 2fr 1.2fr 1fr 1fr; }
-  .cardapio__gallery figure:first-child { grid-column: auto; }
-}
-.cardapio__gallery figure { overflow: hidden; background: var(--c-wood); }
-.cardapio__gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 5; }
-.cardapio__gallery figure:first-child img { aspect-ratio: 16 / 10; }
-@media (min-width: 48em) {
-  .cardapio__gallery figure:first-child img { aspect-ratio: auto; }
+@media (max-width: 36em) {
+  .menu-list { flex-direction: column; align-items: center; }
+  .menu-list li:not(:last-child)::after { content: none; }
 }

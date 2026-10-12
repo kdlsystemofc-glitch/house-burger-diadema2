@@ -34,3 +34,11 @@ Gerado por `python scripts/assets.py`. Versão "1600" = largura original quando 
 ## Arquivos não usados
 
 - Versões duplicadas "-1600" de fotos pequenas são idênticas às "-800" (a foto original é menor). Remover na Fase 4.
+
+## Fase 1, revisão de fidelidade
+
+| Slot | Arquivo | Origem | Tipo |
+|---|---|---|---|
+| S1 vídeo de fundo (loop) | hero-loop.webm (812 KB) / hero-loop.mp4 (980 KB), 480×854, 21 s, sem áudio | trecho 0–21 s de `imagens/WhatsApp Video 2026-10-03 at 22.28.16.mp4` | VÍDEO REAL (V01), recortado e recomprimido |
+| S1 pôster | hero-loop-poster.webp | 1º quadro do loop | VÍDEO REAL (V01) |
+| S4 foto única | patio-toco-800/1600.webp | F02 | FOTO REAL |

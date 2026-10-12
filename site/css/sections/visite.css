@@ -1,50 +1,38 @@
-/* S5 Visite + rodapé */
+/* S5 Visite (secao-05): título central com brilho, "Abre às 17:00" em serifa, linhas pequenas abaixo */
 .visite {
-  padding-block: var(--space-xl);
+  justify-items: center;
+  gap: var(--space-s);
+  padding-block: var(--space-xl) var(--space-l);
   background:
-    radial-gradient(ellipse 50% 40% at 50% 0%, var(--c-ember-haze), transparent 70%),
+    radial-gradient(ellipse 45% 35% at 50% 30%, var(--c-glow-soft), transparent 70%),
     var(--c-coal);
+  text-align: center;
 }
-.visite__layout { display: grid; gap: var(--space-l); }
-@media (min-width: 56em) {
-  .visite__layout { grid-template-columns: 5fr 7fr; align-items: center; gap: var(--space-xl); }
-}
-.visite__photo { overflow: hidden; background: var(--c-wood); }
-.visite__photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 40%; }
-@media (max-width: 55.99em) {
-  .visite__photo img { aspect-ratio: 4 / 3.4; }
-}
-.visite__info { display: grid; gap: var(--space-m); justify-items: start; }
+.visite > * { justify-self: center; }
 .visite__title {
-  font-size: var(--fs-xl);
-  text-shadow: 0 0 0.5em var(--c-glow);
+  font-size: var(--fs-hero);
+  font-weight: 500;
+  letter-spacing: var(--track-tight);
+  color: var(--c-cream);
+  text-shadow: 0 0 0.45em var(--c-glow), 0 0 1.4em var(--c-glow-soft);
 }
-.visite__title span { display: block; color: var(--c-mute); font-size: 0.55em; letter-spacing: 0.06em; margin-top: 0.4em; }
-
-.facts { display: grid; gap: var(--space-s); width: 100%; }
-@media (min-width: 36em) {
-  .facts { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, 1.5fr); }
+.visite__slash { color: var(--c-cheese); }
+.visite__hours {
+  margin-top: var(--space-s);
+  font-family: var(--f-title); font-weight: 500; font-size: var(--fs-l); color: var(--c-cream);
 }
-.facts div { padding-top: var(--space-xs); border-top: 1px solid var(--c-line); }
-.facts dt { font-size: var(--fs-xs); font-weight: 600; letter-spacing: var(--track-label); text-transform: uppercase; color: var(--c-mute); }
-.facts dd { display: flex; align-items: center; min-height: var(--tap); margin: 0; font-size: var(--fs-m); color: var(--c-cream); overflow-wrap: anywhere; }
-.facts a { display: inline-flex; align-items: center; min-height: var(--tap); text-underline-offset: 0.25em; }
-.visite__actions { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
+.visite__lines {
+  display: grid; gap: var(--space-2xs);
+  font-style: normal; font-size: var(--fs-xs); color: var(--c-mute);
+  overflow-wrap: anywhere;
+}
+.visite__lines a { display: inline-flex; align-items: center; min-height: var(--tap); color: var(--c-cream); text-underline-offset: 0.25em; }
+.visite__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-xs); margin-top: var(--space-s); }
 
 .site-footer {
-  padding-block: var(--space-l);
-  border-top: 1px solid var(--c-line);
+  padding-block: var(--space-m);
   background: var(--c-coal);
 }
-.site-footer__inner {
-  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-m);
-}
-.site-footer__brand { display: flex; align-items: center; gap: var(--space-s); font-family: var(--f-title); font-weight: 600; font-size: var(--fs-l); text-transform: uppercase; letter-spacing: var(--track-title); }
-.site-footer__brand img { width: clamp(2.75rem, 2.4rem + 1.5vw, 3.5rem); border-radius: 50%; }
-.site-footer nav ul { display: flex; flex-wrap: wrap; gap: 0 var(--space-m); list-style: none; padding: 0; }
-.site-footer nav a {
-  display: inline-flex; align-items: center; min-height: var(--tap);
-  font-size: var(--fs-xs); font-weight: 600; letter-spacing: var(--track-label); text-transform: uppercase; text-decoration: none;
-}
-.site-footer nav a:hover { color: var(--c-cheese); }
+.site-footer__inner { display: flex; align-items: center; justify-content: center; gap: var(--space-s); }
+.site-footer__logo { width: clamp(2.5rem, 2.2rem + 1vw, 3rem); border-radius: 50%; }
 .site-footer__copy { font-size: var(--fs-xs); color: var(--c-mute); }
