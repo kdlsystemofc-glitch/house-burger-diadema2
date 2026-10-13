@@ -1,20 +1,24 @@
-/* S4 Ambiente (secao-04): foto real larga, full-bleed, fundida no carvão em cima e embaixo.
-   O burger da seção anterior invade o topo dela; o título de fechamento invade a base. */
+/* S4 Ambiente (secao-04): foto real larga, full-bleed. Sobe por baixo da base da cena da brasa
+   (as duas se fundem por máscara) e se dissolve no fechamento. */
 .ambiente {
   position: relative;
   z-index: 1;
-  background: var(--c-coal);
+  margin-top: calc(var(--overlap-photo) * -1);
 }
-.ambiente__photo { position: relative; display: block; }
+/* A máscara fica na <picture>, assim foto e escurecimento se dissolvem juntos (sem emendas) */
+.ambiente__photo {
+  position: relative; display: block;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, var(--c-coal) 30%, var(--c-coal) 58%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, var(--c-coal) 30%, var(--c-coal) 58%, transparent 100%);
+}
 .ambiente__photo img {
   width: 100%;
-  height: clamp(24rem, 42vw, 44rem);
+  height: clamp(26rem, 46vw, 48rem);
   object-fit: cover; object-position: 50% 55%;
 }
 .ambiente__photo::after {
   content: ""; position: absolute; inset: 0;
   background:
-    linear-gradient(to bottom, var(--c-coal) 0%, transparent 30%, transparent 55%, var(--c-coal) 100%),
     linear-gradient(to right, var(--c-overlay) 0%, transparent 22%, transparent 78%, var(--c-overlay) 100%),
     linear-gradient(var(--c-photo-dim), var(--c-photo-dim));
 }

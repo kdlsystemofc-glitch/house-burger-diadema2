@@ -58,7 +58,11 @@
 
     <!-- S2 + S3 (secao-02 e secao-03): título sobre a brasa e burger recortado flutuando até a foto do ambiente -->
     <section id="cardapio" class="manifesto grid" aria-labelledby="manifesto-title">
-      <div class="ember-band full" aria-hidden="true"></div>
+      <!-- PLATE gerado por IA (brasa, fumaça, chama, grelha). Decorativo. PENDÊNCIA: confirmar com o cliente se a casa usa brasa/grelha (o plate sugere o preparo). -->
+      <picture class="manifesto__plate full" aria-hidden="true">
+        <source media="(min-width: 48em)" srcset="assets/plate-brasa-grelha-1600.webp">
+        <img src="assets/plate-brasa-grelha-800.webp" width="1600" height="900" alt="" decoding="async">
+      </picture>
       <div class="manifesto__text">
         <!-- PENDÊNCIA: slogan da casa (o do mockup era inventado). Título = categoria + atributo reais do Google. -->
         <h2 id="manifesto-title" class="manifesto__title"><span>Hambúrguer</span> <span>&amp;</span> <span>happy hour</span></h2>

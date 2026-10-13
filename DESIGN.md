@@ -240,3 +240,10 @@ Movimento: com prefers-reduced-motion o vídeo some e fica o pôster. O botão d
 - **Vídeo:** autoplay+muted+loop+playsinline por HTML, reforçado por JS (play em canplay, na volta da aba, no 1º toque/rolagem e ao ser pausado). **Não** é mais escondido com prefers-reduced-motion (pedido explícito: "sempre em looping"). Desvio registrado da regra da Fase 3; o botão de pausa entra na Fase 3C.
 - **Parallax do vídeo:** a camada desce a 0,35× a rolagem, só transform, sem texto dentro. Desvio da regra "0,05–0,10 / máx. 24px" por pedido explícito do humano. Desliga com prefers-reduced-motion.
 - Removidos da página: mosaico, galeria e avaliações (S3/S4 antigos), lista em colunas, `cardapio.css`. Assets sem uso: burger-australiano, hero-patio, burger-empanado, cheddar-carne, burger-crispy, drink, patio-mesa, salao, fachada, corredor-entrada, logo só no cabeçalho. Limpeza na Fase 4.
+
+## Revisão 3 (2026-10-12): página integrada como o mockup
+
+- Novo PLATE do humano: `design/plates/plate-brasa-grelha.png` (gerado por IA: brasa, fumaça, chama, grelha) → `plate-brasa-grelha-800/1600.webp`. Substitui o plate de bokeh.
+- Integração: a cena da brasa sobe **14vw sobre a base do hero** (topo transparente por máscara: a fumaça aparece sobre o vídeo). A foto do ambiente sobe **10vw sob a base da brasa** (as duas se dissolvem por máscara). O título de fechamento sobe sobre a base da foto. Nenhuma borda reta entre seções.
+- As máscaras ficam no `<picture>` (foto + escurecimento juntos). Nada animado, sem transform/filter/opacity nos ancestrais (R9).
+- **Atenção factual:** o plate mostra grelha a carvão, e isso sugere um método de preparo ainda não confirmado (PENDENCIAS-CLIENTE item 13). Se a casa não usar brasa, trocar pelo plate de bokeh (`plate-brasa.png`, ainda no repositório).

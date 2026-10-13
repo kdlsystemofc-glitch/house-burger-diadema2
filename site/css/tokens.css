@@ -54,4 +54,6 @@
   --radius: 0.25rem;
   --tap: 2.75rem; /* 44px alvo de toque */
   --measure: 60ch;
+  --overlap-hero: clamp(6rem, 14vw, 15rem);   /* fumaça da brasa sobe sobre a base do hero */
+  --overlap-photo: clamp(5rem, 10vw, 11rem);  /* foto do ambiente sobe sob a base da brasa */
 }

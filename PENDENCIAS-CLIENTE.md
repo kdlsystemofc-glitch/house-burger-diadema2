@@ -16,7 +16,7 @@ Atualizado: 2026-10-12 (Fase 0)
 | 10 | **Autorização de imagem das pessoas** nas fotos (fachada, corredor, salão, chef) | Fotos marcadas como pendentes | Uso só de fotos sem pessoas |
 | 11 | **Slogan / frase da casa** (o mockup tinha frases inventadas em inglês) | `<!-- PENDÊNCIA -->` | Seções só com títulos simples |
 | 12 | **Reserva e eventos**: precisa reservar? Como? O espaço privativo para eventos existe? Capacidade? | Texto do Google, a confirmar | Atributos não aparecem |
-| 13 | **Preparo**: carne na brasa/carvão, chapa ou parrilla? | Nada dito | Sem menção ao método |
+| 13 | **Preparo**: carne na brasa/carvão, chapa ou parrilla? | O site usa imagem (IA) de brasa e grelha como decoração | Se não for na brasa, a imagem da brasa sai (fica o bokeh abstrato) |
 | 14 | **Fotos do salão grande / luz roxa** (do Google): são da casa? | Não usadas | Ficam fora |
 | 15 | **Domínio** do site (para SEO/Open Graph) | — | SEO sem URL final |
 | 16 | **Instagram / redes oficiais** | — | Sem links de redes |
