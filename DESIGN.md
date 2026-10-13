@@ -252,3 +252,9 @@ Movimento: com prefers-reduced-motion o vídeo some e fica o pôster. O botão d
 
 - Burger: trocado pelo `burger-ia` (IA, enviado pelo humano, fundo transparente). Largura clamp(17rem, 36vw, 32rem); ~35% da altura invade a foto do ambiente.
 - Conexão: a fumaça sobe 22vw sobre o hero (antes 14vw), a foto sobe 16vw sob a brasa (antes 10vw), o fechamento sobe 26% sobre a foto, as máscaras ficaram mais longas e o hero mobile tem 82svh. Brilho do burger com overflow-x: clip na seção (sem rolagem lateral).
+
+## Revisão 5 (2026-10-12): vídeo do hero tratado
+
+- Trecho 15–30 s (pedido do humano). Cadeia ffmpeg: deshake (o vidstabtransform deste build corrompia os quadros e foi descartado) → hqdn3d → unsharp → eq/colorbalance/curves (quente, pretos fundos) → vinheta → câmera lenta 0,8× com mistura de quadros (a interpolação mci gerava blocos e foi descartada) → loop com fusão de 1,2 s.
+- Grão de filme por CSS (SVG estático em .hero::after), sem custo de banda e fora da camada de parallax (R9).
+- Master para upscale: `design/video/hero-master.mp4` (480×854, 30 fps, crf 14). Próximo passo do humano: Video2X 2× → devolver o arquivo para eu reencodar a versão web.

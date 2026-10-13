@@ -3,3 +3,4 @@ screenshots/
 *.tmp
 .DS_Store
 Thumbs.db
+design/video/*.mp4
