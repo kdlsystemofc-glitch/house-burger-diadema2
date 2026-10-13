@@ -16,7 +16,7 @@ Etapa atual: FASE 2 (aguardando aprovação visual da Fase 1)
   - 39c586d ajustes finais + screenshots 1440/768/390
   - Revisão de fidelidade ao mockup + vídeo em loop no hero (pedido do humano).
   - Revisão 2: fechamento como o mockup, burger recortado, vídeo sempre em loop + parallax.
-  - Push: NÃO feito (GH_TOKEN ausente).
+  - Push feito em 2026-10-12 para https://github.com/kdlsystemofc-glitch/house-burger-diadema2 (branch main), por ordem explícita do humano, com token colado no chat (exceção à R12). Repositório PÚBLICO (o protocolo pede privado). Token a revogar.
 
 ## Seções (CHECK-SEÇÃO mecânico: todas passaram em 1440 e 390)
 | Seção | Check | Problema aberto |
@@ -31,7 +31,7 @@ Etapa atual: FASE 2 (aguardando aprovação visual da Fase 1)
 - Aprovação visual da Fase 1 pelo humano.
 - Respostas às 5 perguntas do DESIGN.md §8 (adotei os padrões, revisáveis).
 - A1 / A2 / A3 não recebidos (fallbacks ativos, registrados em assets.md).
-- GH_TOKEN não definido (sem push).
+- Revogar o token usado no push (exposto no chat) e configurar $env:GH_TOKEN. Avaliar deixar o repositório privado.
 - 18 itens do cliente em PENDENCIAS-CLIENTE.md.
 
 ## Próxima etapa
