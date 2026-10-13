@@ -9,6 +9,7 @@
   justify-items: center;
   align-content: start;
   min-height: max(40rem, 64vw);
+  overflow-x: clip; /* brilho do burger não pode gerar rolagem lateral; o eixo vertical continua livre */
   margin-top: calc(var(--overlap-hero) * -1);
   padding-top: calc(var(--overlap-hero) + clamp(1rem, 3vw, 3rem));
   text-align: center;
@@ -16,8 +17,8 @@
 /* A máscara fica na <picture>: plate e escurecimento se dissolvem juntos no hero (topo) e na foto (base) */
 .manifesto__plate {
   position: absolute; inset: 0; z-index: -1; display: block;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, var(--c-coal) 26%, var(--c-coal) 78%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, var(--c-coal) 26%, var(--c-coal) 78%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, var(--c-coal) 34%, var(--c-coal) 74%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, var(--c-coal) 34%, var(--c-coal) 74%, transparent 100%);
 }
 .manifesto__plate img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 100%; }
 /* escurece as laterais e atrás do título para leitura */
@@ -68,17 +69,18 @@
 .manifesto__burger {
   position: relative;
   align-self: end;
-  width: clamp(15rem, 32vw, 30rem);
+  width: clamp(17rem, 36vw, 32rem);
   margin-top: var(--space-l);
-  margin-bottom: calc(clamp(15rem, 32vw, 30rem) * -0.38);
+  /* ~35% da altura do burger (proporção 1000×765) invade a foto do ambiente */
+  margin-bottom: calc(clamp(17rem, 36vw, 32rem) * -0.27);
 }
 .manifesto__burger img { width: 100%; height: auto; }
 /* brilho quente atrás e sombra de contato (CSS, sem filter) */
 .manifesto__burger::before {
-  content: ""; position: absolute; inset: 0 -25% 5% -25%; z-index: -1;
-  background: radial-gradient(ellipse 50% 50% at 50% 60%, var(--c-ember-haze), transparent 70%);
+  content: ""; position: absolute; inset: -10% -30% 0 -30%; z-index: -1;
+  background: radial-gradient(ellipse 50% 50% at 50% 55%, var(--c-ember-haze), transparent 70%);
 }
 .manifesto__burger::after {
-  content: ""; position: absolute; left: 4%; right: 4%; bottom: -4%; height: 12%; z-index: -1;
+  content: ""; position: absolute; left: 0; right: 0; bottom: -7%; height: 18%; z-index: -1;
   background: radial-gradient(ellipse 50% 50% at 50% 50%, var(--c-backdrop), transparent 72%);
 }

@@ -5,7 +5,7 @@
   z-index: 2;
   justify-items: center;
   gap: var(--space-xs);
-  margin-top: calc(clamp(26rem, 46vw, 48rem) * -0.18);
+  margin-top: calc(clamp(26rem, 46vw, 48rem) * -0.26);
   padding-bottom: var(--space-xl);
   text-align: center;
 }

@@ -247,3 +247,8 @@ Movimento: com prefers-reduced-motion o vídeo some e fica o pôster. O botão d
 - Integração: a cena da brasa sobe **14vw sobre a base do hero** (topo transparente por máscara: a fumaça aparece sobre o vídeo). A foto do ambiente sobe **10vw sob a base da brasa** (as duas se dissolvem por máscara). O título de fechamento sobe sobre a base da foto. Nenhuma borda reta entre seções.
 - As máscaras ficam no `<picture>` (foto + escurecimento juntos). Nada animado, sem transform/filter/opacity nos ancestrais (R9).
 - **Atenção factual:** o plate mostra grelha a carvão, e isso sugere um método de preparo ainda não confirmado (PENDENCIAS-CLIENTE item 13). Se a casa não usar brasa, trocar pelo plate de bokeh (`plate-brasa.png`, ainda no repositório).
+
+## Revisão 4 (2026-10-12): conexão das seções + burger novo
+
+- Burger: trocado pelo `burger-ia` (IA, enviado pelo humano, fundo transparente). Largura clamp(17rem, 36vw, 32rem); ~35% da altura invade a foto do ambiente.
+- Conexão: a fumaça sobe 22vw sobre o hero (antes 14vw), a foto sobe 16vw sob a brasa (antes 10vw), o fechamento sobe 26% sobre a foto, as máscaras ficaram mais longas e o hero mobile tem 82svh. Brilho do burger com overflow-x: clip na seção (sem rolagem lateral).

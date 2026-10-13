@@ -21,7 +21,7 @@ Atualizado: 2026-10-12 (Fase 0)
 | 15 | **Domínio** do site (para SEO/Open Graph) | — | SEO sem URL final |
 | 16 | **Instagram / redes oficiais** | — | Sem links de redes |
 | 17 | Pode usar a **nota 4,4 e trechos de avaliações** do Google? | Planejado (aguarda decisão) | Só link para o Google |
-| 18 | Aprovar imagens **recriadas/ampliadas por IA** (se houver) | Nenhuma ainda | Não publico imagem recriada |
+| 18 | Aprovar imagens **geradas/recriadas por IA**: burger em destaque (pão escuro + cheddar) e cena de brasa/grelha | No rascunho | O burger volta a ser recorte de foto real (F13); a brasa vira bokeh abstrato |
 
 ---
 
