@@ -258,3 +258,11 @@ Movimento: com prefers-reduced-motion o vídeo some e fica o pôster. O botão d
 - Trecho 15–30 s (pedido do humano). Cadeia ffmpeg: deshake (o vidstabtransform deste build corrompia os quadros e foi descartado) → hqdn3d → unsharp → eq/colorbalance/curves (quente, pretos fundos) → vinheta → câmera lenta 0,8× com mistura de quadros (a interpolação mci gerava blocos e foi descartada) → loop com fusão de 1,2 s.
 - Grão de filme por CSS (SVG estático em .hero::after), sem custo de banda e fora da camada de parallax (R9).
 - Master para upscale: `design/video/hero-master.mp4` (480×854, 30 fps, crf 14). Próximo passo do humano: Video2X 2× → devolver o arquivo para eu reencodar a versão web.
+
+## Revisão 6 (2026-10-12): S2 com duas imagens + geometria do mockup + vídeo 4×
+
+- S2 = cena com 2 plates: carvão à esquerda (64% da largura, 72% da altura) e chama/grelha à direita (58%, quase até o hero). Cada uma se dissolve no centro, no topo e na base por máscara composta (intersect). Título e cardápio na faixa escura do meio.
+- Burger como no mockup: o topo entra ~22% na base da cena e a base toca ~8% a foto. Entre os dois fica um vão escuro. A foto do ambiente não sobe mais sob a cena (o overlap-photo foi removido).
+- Celular: as imagens ficam só na parte de baixo da cena para não passar atrás do texto.
+- Vídeo: upscale 4× do humano → `scripts/video-hero.sh` (corte por quadro, pois o .mkv tem tempos esticados) → versão vertical 720p (celular) e recorte horizontal 1080×720 (desktop), escolhidos por `<source media>`.
+- Grão do hero com máscara (sumia a emenda clara na base do hero).

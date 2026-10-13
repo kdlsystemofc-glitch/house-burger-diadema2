@@ -50,6 +50,9 @@
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .92 0 0 0 0 .8 0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
   background-size: 11rem 11rem;
+  /* o grão some antes da base, senão clareia a emenda com a cena da brasa */
+  -webkit-mask-image: linear-gradient(to bottom, var(--c-coal) 55%, transparent 92%);
+  mask-image: linear-gradient(to bottom, var(--c-coal) 55%, transparent 92%);
 }
 .hero__content { display: grid; justify-items: center; gap: var(--space-l); padding-bottom: var(--space-l); }
 .hero__title {
