@@ -231,3 +231,12 @@ Descartados por serem genéricos: fumaça, vapor, faísca subindo, brilho "shine
 Assets que ficaram sem uso (remover na Fase 4): hero-patio, burger-empanado, cheddar-carne, burger-crispy, drink, patio-mesa, salao, fachada, corredor-entrada.
 Desvio conhecido: no desktop o vídeo vertical (480 px) é ampliado e cortado; fica suave atrás do overlay. Melhoraria com um vídeo horizontal em 1080p do cliente.
 Movimento: com prefers-reduced-motion o vídeo some e fica o pôster. O botão de pausa entra na Fase 3.
+
+## Revisão 2 (pedido do humano, 2026-10-12): fechamento, burger e vídeo
+
+- **Burger:** a máscara oval em F17 trocada por **recorte real de F13** (`design/plates/f13-recorte.png` → `site/assets/burger-recorte.webp`, 508×595). Fundo removido por segmentação automática (rembg, modelo isnet-general-use); os pixels do burger não foram alterados. Ele fica dentro da seção da brasa e a base invade a foto do ambiente, como no mockup. A borda esquerda do pão inferior é levemente reta (a foto original corta ali).
+- **Emendas horizontais:** a causa era a borda do plate (que não ocupava a altura toda). Agora o plate encosta na base da seção e o degradê cobre topo e base.
+- **Fechamento:** a ordem agora é foto → título, como no mockup. Saíram os selos, a nota e os botões. O título em 2 linhas "House Burger / Centro // Diadema" fica dourado com brilho e sobe sobre a base da foto. Abaixo, "Abre às 17:00" em serifa e duas linhas pequenas e cinzas (endereço; telefone / Pedir delivery / Pedir e retirar / Rotas). O rodapé separado foi removido; o © fica no fim da seção.
+- **Vídeo:** autoplay+muted+loop+playsinline por HTML, reforçado por JS (play em canplay, na volta da aba, no 1º toque/rolagem e ao ser pausado). **Não** é mais escondido com prefers-reduced-motion (pedido explícito: "sempre em looping"). Desvio registrado da regra da Fase 3; o botão de pausa entra na Fase 3C.
+- **Parallax do vídeo:** a camada desce a 0,35× a rolagem, só transform, sem texto dentro. Desvio da regra "0,05–0,10 / máx. 24px" por pedido explícito do humano. Desliga com prefers-reduced-motion.
+- Removidos da página: mosaico, galeria e avaliações (S3/S4 antigos), lista em colunas, `cardapio.css`. Assets sem uso: burger-australiano, hero-patio, burger-empanado, cheddar-carne, burger-crispy, drink, patio-mesa, salao, fachada, corredor-entrada, logo só no cabeçalho. Limpeza na Fase 4.

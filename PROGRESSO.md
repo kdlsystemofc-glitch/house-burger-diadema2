@@ -15,15 +15,16 @@ Etapa atual: FASE 2 (aguardando aprovação visual da Fase 1)
   - d60451f visite e rodape pronta
   - 39c586d ajustes finais + screenshots 1440/768/390
   - Revisão de fidelidade ao mockup + vídeo em loop no hero (pedido do humano).
+  - Revisão 2: fechamento como o mockup, burger recortado, vídeo sempre em loop + parallax.
   - Push: NÃO feito (GH_TOKEN ausente).
 
 ## Seções (CHECK-SEÇÃO mecânico: todas passaram em 1440 e 390)
 | Seção | Check | Problema aberto |
 |---|---|---|
 | S1 Hero (#inicio) | OK | vídeo vertical ampliado no desktop (suave); horário completo pendente |
-| S2 Manifesto (#casa) | OK | título sem slogan (PENDÊNCIA) |
-| S3 Cardápio (#cardapio) | OK | burger sem recorte (fallback do A1); preços; grafia "Harmburguer" |
-| S4 Ambiente (#ambiente) | OK | autorização da nota do Google |
+| (S2 unida à S3) | — | título sem slogan (PENDÊNCIA) |
+| S2+S3 Brasa + burger (#cardapio) | OK | burger recortado automaticamente (confirmar com o cliente); preços; grafia "Harmburguer" |
+| S4 Ambiente (#ambiente) | OK | só foto; sem texto |
 | S5 Visite + rodapé (#visite) | OK | título sem frase da casa (PENDÊNCIA); logo 150 px |
 
 ## Pendências abertas

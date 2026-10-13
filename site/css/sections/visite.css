@@ -1,38 +1,35 @@
-/* S5 Visite (secao-05): título central com brilho, "Abre às 17:00" em serifa, linhas pequenas abaixo */
+/* S5 Fechamento (secao-05): título dourado com brilho subindo sobre a base da foto,
+   "Abre às 17:00" em serifa, duas linhas pequenas e cinzas. Sem botões, como no mockup. */
 .visite {
+  position: relative;
+  z-index: 2;
   justify-items: center;
-  gap: var(--space-s);
-  padding-block: var(--space-xl) var(--space-l);
-  background:
-    radial-gradient(ellipse 45% 35% at 50% 30%, var(--c-glow-soft), transparent 70%),
-    var(--c-coal);
+  gap: var(--space-xs);
+  margin-top: calc(clamp(24rem, 42vw, 44rem) * -0.16);
+  padding-bottom: var(--space-xl);
   text-align: center;
 }
-.visite > * { justify-self: center; }
 .visite__title {
   font-size: var(--fs-hero);
   font-weight: 500;
   letter-spacing: var(--track-tight);
-  color: var(--c-cream);
-  text-shadow: 0 0 0.45em var(--c-glow), 0 0 1.4em var(--c-glow-soft);
+  color: var(--c-gold);
+  text-shadow: 0 0 0.35em var(--c-glow), 0 0 1.2em var(--c-glow);
 }
-.visite__slash { color: var(--c-cheese); }
+.visite__title > span { display: block; }
 .visite__hours {
-  margin-top: var(--space-s);
+  margin-top: var(--space-m);
   font-family: var(--f-title); font-weight: 500; font-size: var(--fs-l); color: var(--c-cream);
 }
 .visite__lines {
-  display: grid; gap: var(--space-2xs);
-  font-style: normal; font-size: var(--fs-xs); color: var(--c-mute);
+  display: grid; justify-items: center;
+  font-style: normal; font-size: var(--fs-xs); line-height: 1.4; color: var(--c-mute);
   overflow-wrap: anywhere;
 }
-.visite__lines a { display: inline-flex; align-items: center; min-height: var(--tap); color: var(--c-cream); text-underline-offset: 0.25em; }
-.visite__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-xs); margin-top: var(--space-s); }
-
-.site-footer {
-  padding-block: var(--space-m);
-  background: var(--c-coal);
+.visite__lines a {
+  display: inline-flex; align-items: center; min-height: var(--tap);
+  color: var(--c-mute); text-decoration: none;
 }
-.site-footer__inner { display: flex; align-items: center; justify-content: center; gap: var(--space-s); }
-.site-footer__logo { width: clamp(2.5rem, 2.2rem + 1vw, 3rem); border-radius: 50%; }
-.site-footer__copy { font-size: var(--fs-xs); color: var(--c-mute); }
+.visite__lines a:hover { color: var(--c-cream); text-decoration: underline; text-underline-offset: 0.25em; }
+.visite__lines > span { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; column-gap: 0.5em; }
+.visite__copy { margin-top: var(--space-l); font-size: var(--fs-xs); color: var(--c-mute); }

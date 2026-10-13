@@ -42,3 +42,4 @@ Gerado por `python scripts/assets.py`. Versão "1600" = largura original quando 
 | S1 vídeo de fundo (loop) | hero-loop.webm (812 KB) / hero-loop.mp4 (980 KB), 480×854, 21 s, sem áudio | trecho 0–21 s de `imagens/WhatsApp Video 2026-10-03 at 22.28.16.mp4` | VÍDEO REAL (V01), recortado e recomprimido |
 | S1 pôster | hero-loop-poster.webp | 1º quadro do loop | VÍDEO REAL (V01) |
 | S4 foto única | patio-toco-800/1600.webp | F02 | FOTO REAL |
+| S2/S3 burger flutuante | burger-recorte.webp (508×595, 61 KB, com alfa) | `imagens/imgi_18_632296417_18427711729187683_536758917969547754_n.jpg` (F13) → `design/plates/f13-recorte.png` | FOTO REAL com **fundo removido por IA de segmentação** (rembg/isnet). Pixels do burger intactos. Confirmar com o cliente antes de publicar (direito de uso + recorte). |

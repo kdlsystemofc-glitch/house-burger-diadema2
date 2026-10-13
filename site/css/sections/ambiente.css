@@ -1,40 +1,20 @@
-/* S4 Ambiente: foto real full-bleed e larga, fundida no carvão em cima e embaixo (secao-04) */
+/* S4 Ambiente (secao-04): foto real larga, full-bleed, fundida no carvão em cima e embaixo.
+   O burger da seção anterior invade o topo dela; o título de fechamento invade a base. */
 .ambiente {
   position: relative;
-  isolation: isolate;
+  z-index: 1;
   background: var(--c-coal);
-  text-align: center;
 }
 .ambiente__photo { position: relative; display: block; }
 .ambiente__photo img {
   width: 100%;
-  height: clamp(18rem, 42vw, 44rem);
+  height: clamp(24rem, 42vw, 44rem);
   object-fit: cover; object-position: 50% 55%;
 }
 .ambiente__photo::after {
   content: ""; position: absolute; inset: 0;
   background:
-    linear-gradient(to bottom, var(--c-coal) 0%, transparent 32%, transparent 58%, var(--c-coal) 100%),
-    linear-gradient(to right, var(--c-overlay) 0%, transparent 25%, transparent 75%, var(--c-overlay) 100%);
+    linear-gradient(to bottom, var(--c-coal) 0%, transparent 30%, transparent 55%, var(--c-coal) 100%),
+    linear-gradient(to right, var(--c-overlay) 0%, transparent 22%, transparent 78%, var(--c-overlay) 100%),
+    linear-gradient(var(--c-photo-dim), var(--c-photo-dim));
 }
-/* Informações sobem para a parte escura da foto (overlay ≥ 70% onde há texto) */
-.ambiente__info {
-  position: relative;
-  display: grid; justify-items: center; gap: var(--space-s);
-  margin-top: calc(var(--space-xl) * -1);
-  padding-bottom: var(--space-l);
-}
-.tags { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-xs); list-style: none; padding: 0; }
-.tags li {
-  padding: 0.4em 0.9em;
-  border: 1px solid var(--c-line); border-radius: 999px;
-  background: var(--c-overlay);
-  font-size: var(--fs-xs); letter-spacing: 0.06em; color: var(--c-cream);
-}
-.rating {
-  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: var(--space-2xs) var(--space-s);
-  max-width: none; font-size: var(--fs-s); color: var(--c-mute);
-}
-.rating__value { font-family: var(--f-title); font-weight: 600; font-size: var(--fs-l); line-height: 1; color: var(--c-cheese); }
-.rating__stars { display: block; width: clamp(5rem, 4.5rem + 1.5vw, 6.5rem); height: auto; }
-.rating a { display: inline-flex; align-items: center; min-height: var(--tap); color: var(--c-cheese); text-underline-offset: 0.25em; }

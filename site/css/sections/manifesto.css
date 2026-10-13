@@ -1,15 +1,16 @@
-/* S2 Manifesto: título SOBRE a linha de brasa, como no mockup (secao-02).
+/* S2+S3 (secao-02/03): título sobre a brasa; burger recortado flutua e invade a foto do ambiente.
    R9: a faixa e seus ancestrais não têm transform, filter nem opacity < 1. Nunca animada. */
 .manifesto {
   position: relative;
+  z-index: 2;
   isolation: isolate;
-  min-height: clamp(22rem, 58vw, 46rem);
-  align-content: start;
-  padding-top: clamp(3rem, 9vw, 9rem);
+  justify-items: center;
+  padding-top: clamp(2rem, 5vw, 5rem);
   background: var(--c-coal);
   text-align: center;
 }
 .manifesto > .ember-band { position: absolute; inset: 0; z-index: -1; }
+.manifesto__text { display: grid; justify-items: center; gap: var(--space-s); }
 .manifesto__title {
   font-size: var(--fs-hero);
   font-weight: 500;
@@ -18,20 +19,61 @@
   text-shadow: 0 0 0.4em var(--c-backdrop), 0 0 1.2em var(--c-glow-soft);
 }
 .manifesto__title span:first-child { display: block; }
+.manifesto__label {
+  margin-top: var(--space-s);
+  font-size: var(--fs-xs); letter-spacing: var(--track-label); text-transform: uppercase; color: var(--c-mute);
+}
+/* Lista em linha, separada por pontos, discreta como as linhas pequenas do mockup */
+.menu-list {
+  list-style: none; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0;
+  max-width: 44rem;
+}
+.menu-list li {
+  font-family: var(--f-title); font-weight: 500; font-size: var(--fs-m);
+  line-height: 1.5; color: var(--c-cream);
+}
+.menu-list li:not(:last-child)::after { content: "·"; margin-inline: 0.5em; color: var(--c-ember); }
+@media (max-width: 36em) {
+  .menu-list { flex-direction: column; align-items: center; }
+  .menu-list li:not(:last-child)::after { content: none; }
+}
+.text-link {
+  display: inline-flex; align-items: center; min-height: var(--tap);
+  font-size: var(--fs-xs); font-weight: 600; letter-spacing: var(--track-label); text-transform: uppercase;
+  color: var(--c-cheese); text-underline-offset: 0.35em;
+}
 
-/* Plate P1 + brilho de chama à direita + névoa clara atrás do título + grão SVG estático.
+/* Burger: tamanho e posição do mockup (~39% da largura no pôster); a base invade a foto seguinte */
+.manifesto__burger {
+  position: relative;
+  width: clamp(15rem, 34vw, 30rem);
+  margin-top: var(--space-m);
+  margin-bottom: calc(clamp(15rem, 34vw, 30rem) * -0.42);
+}
+.manifesto__burger img { width: 100%; height: auto; }
+/* sombra de contato e brilho quente atrás (CSS, sem filter) */
+.manifesto__burger::before {
+  content: ""; position: absolute; inset: -12% -22% 10% -22%; z-index: -1;
+  background: radial-gradient(ellipse 50% 50% at 50% 55%, var(--c-ember-haze), transparent 70%);
+}
+.manifesto__burger::after {
+  content: ""; position: absolute; left: 6%; right: 6%; bottom: -5%; height: 12%; z-index: -1;
+  background: radial-gradient(ellipse 50% 50% at 50% 50%, var(--c-backdrop), transparent 72%);
+}
+
+/* Plate P1 + chama à direita + névoa atrás do título + grão SVG estático.
    O feTurbulence fica dentro da imagem data-URI, não como filter no elemento. */
 .ember-band {
   background-color: var(--c-coal);
   background-image:
-    linear-gradient(to bottom, var(--c-coal) 0%, transparent 30%, transparent 58%, var(--c-coal) 92%),
-    radial-gradient(ellipse 22% 38% at 82% 52%, var(--c-flame), transparent 70%),
-    radial-gradient(ellipse 40% 30% at 22% 70%, var(--c-ember-haze), transparent 70%),
-    radial-gradient(ellipse 60% 45% at 50% 30%, var(--c-smoke), transparent 70%),
+    linear-gradient(to bottom, var(--c-coal) 0%, var(--c-coal) 26%, transparent 42%, transparent 62%, var(--c-coal) 96%),
+    radial-gradient(ellipse 22% 34% at 84% 58%, var(--c-flame), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 20% 72%, var(--c-ember-haze), transparent 70%),
+    radial-gradient(ellipse 60% 40% at 50% 22%, var(--c-smoke), transparent 70%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .6 0 0 0 0 .3 0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
     url("../../assets/plate-brasa-1600.webp");
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 10rem 10rem, cover;
-  background-position: center, center, center, center, 0 0, 50% 90%;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
-  box-shadow: inset 0 -3px 0 var(--c-coal); /* esconde a linha de subpixel na base */
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 10rem 10rem, auto 75%;
+  background-position: center, center, center, center, 0 0, 50% 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, repeat-x;
 }

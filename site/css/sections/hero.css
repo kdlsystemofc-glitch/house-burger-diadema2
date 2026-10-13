@@ -29,13 +29,12 @@
   background: var(--c-night);
   text-align: center;
 }
-.hero__media { position: absolute; inset: 0; z-index: -2; overflow: hidden; background: var(--c-night); }
+.hero { overflow: clip; }
+/* Camada do parallax: um pouco mais alta que a seção para nunca mostrar borda ao deslocar */
+.hero__media { position: absolute; inset: -6% 0 -6% 0; z-index: -2; overflow: hidden; background: var(--c-night); will-change: transform; }
 .hero__poster, .hero__video {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; object-position: 50% 45%;
-}
-@media (prefers-reduced-motion: reduce) {
-  .hero__video { display: none; }
 }
 /* Escurecimento forte como no mockup: esquerda-alto mais viva (luzes), direita e base quase pretas */
 .hero::before {
